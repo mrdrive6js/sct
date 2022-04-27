@@ -1,0 +1,101 @@
+@import "./colors";
+@import "./media";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: none;
+
+  @include respond(mobile) {
+    padding: 0 10px;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background: linear-gradient(#fff 50%, #eee) 200px center;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 400px;
+
+    @include respond(mobile) {
+      width: 100%;
+    }
+
+    .form-wrapper {
+      display: none;
+
+      &--show {
+        display: block;
+      }
+
+      &-success {
+        h3 {
+          font-size: 20px;
+          text-align: center;
+        }
+
+        .icon {
+          margin: auto;
+          display: grid;
+          place-items: center;
+          width: 80px;
+          height: 80px;
+          border: 2px solid;
+          border-radius: 50%;
+          font-size: 25px;
+          color: $primary;
+        }
+      }
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+      color: $primary;
+    }
+
+    .err {
+      background-color: $accent-4;
+      // color: $accent;
+      border-radius: 3px;
+      margin-bottom: 8px;
+      padding: 6px;
+      display: none;
+    }
+
+    input {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 40px;
+      margin-top: 7px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    .text-sm.link {
+      font-size: 10.5px;
+      pointer-events: none;
+    }
+  }
+}

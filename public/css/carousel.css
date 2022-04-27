@@ -1,0 +1,149 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel .slider-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 447px;
+  border-bottom: 4px solid #e5e5e5;
+  position: relative;
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel .slider-item {
+    height: 200px;
+  }
+}
+
+.carousel .slider-item-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel .slider-item-banner {
+    -o-object-position: right;
+       object-position: right;
+  }
+}
+
+.carousel .fader {
+  position: absolute;
+  top: 40px;
+  left: 13%;
+  background: rgba(255, 255, 255, 0.8);
+  width: 540px;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel .fader {
+    width: 444px;
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel .fader {
+    width: 100%;
+    position: unset;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), to(#eee)) 200px center;
+    background: linear-gradient(#fff 50%, #eee) 200px center;
+    padding-bottom: 60px;
+  }
+}
+
+.carousel .fader-item {
+  opacity: 0;
+  -webkit-animation: fadein 1.8s forwards;
+          animation: fadein 1.8s forwards;
+}
+
+.carousel .fader-item h1 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel .fader-item h1 {
+    font-size: 30px;
+  }
+}
+
+.carousel .fader-item p {
+  margin: 17px 0;
+  font-size: 14px;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: -155px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  height: 200px;
+  width: 200px;
+  padding-top: 15px;
+  padding-bottom: 0;
+  z-index: 1;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel-controls img {
+  height: 27px;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+}
+
+.carousel-controls img:nth-child(2) {
+  margin: 0 10px;
+}
+
+@-webkit-keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=carousel.css.map */
